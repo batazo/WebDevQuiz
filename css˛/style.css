@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+  * {  box-sizing: border-box;
+    }
+
+
+body {
+  background-image: url("https://i.imgur.com/qzpVNy0.jpg");
+  font-family: 'Roboto', sans-serif;
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+	}
+
+#container {
+background-color:#34ace0;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 3px 3px #8395a7;
+		align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 15px;
+	}
+
+header {
+	border-bottom:1px dotted white;
+	text-align:center;
+}
+
+header h1 { margin:0; padding:0;}
+
+
+section { padding:40px;
+          min-height:400px;}
+
+
+input[type='submit'] {
+	background: #3498db;
+	border: 0px;
+	color: #3498db;
+	padding:10px 15px;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 0px 3px 1px #2980b9;
+}
+
+#result h3 {
+	background: ;
+	padding: 10px;
+	margin: 10px 0;
+}
+
+#result span {
+	color:#000;
+	font-weight: bold;
+}
+
+ #container,
+  form { min-width:100%;}
+
+  .questioninput { margin-bottom:30px;}
+  
+#submit {
+  background-color: #1B1464;
+  color: #fff;
+  padding: 5px;
+  font-size: 20px;
+  
+}
+  
+@media screen and (max-width: 600
+  px) {
+
+  form {
+    margin:initial;
+    text-align:initial;
+  }
