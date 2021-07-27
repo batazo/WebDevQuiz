@@ -59,6 +59,14 @@ input[type='submit'] {
 	font-weight: bold;
 }
 
+.success {
+	color: lightgreen;
+}
+
+.unsuccessful {
+	color: red;
+}
+
  #container,
   form { min-width:100%;}
 
