@@ -1,4 +1,4 @@
-const version = "v7"
+const version = "v9"
 let answerareas;
 let qinputs;
 
@@ -50,13 +50,14 @@ async function renderEvaluation(answerareas){
   let data = await checkAnswer(answerareas)
   let explan = (data.explanation == undefined)? 'Nem jelöltél ki választ' : data.explanation
   let correct = (data.correct)? 'A válaszod helyes!' : 'A válaszod sajnos helytelen!'
+  let correctColor = (data.correct)? 'green' : 'red'
   let whatCorrects = (data.correctAnswers == undefined)? '' : data.correctAnswers
   let whatCorrectString = ""
   if(whatCorrects)
       whatCorrectString = "A helyes válasz(ok):"
       for(let whatCorrect of whatCorrects){ whatCorrectString += ' ' +whatCorrect.answer }
   let renderString = `
-      <p><b>${correct}</b> ${whatCorrectString}</p>
+      <p><b style="color: ${correctColor}">${correct}</b> ${whatCorrectString}</p>
       <p>${explan}</p>
   `
   answerareas.nextElementSibling.innerHTML += renderString;
@@ -98,7 +99,7 @@ async function renerQuestion() {
 			</div><!-- questioninput end -->`;
     }
   } catch (e) {
-    renderString = "SERVER ERROR";
+    renderString = `<p>SERVER ERROR  <button onclick="getQuestion()">REFRESH</button></p>`;
   }
 
   questionDIV.innerHTML = renderString;
