@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
-
   * {  box-sizing: border-box;
     }
 
@@ -15,11 +13,11 @@ body {
 	}
 
 #container {
-background-color:#34ace0;
+    background-color:#34ace0;
     border-radius: 10px;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
-    box-shadow: 3px 3px 3px 3px #8395a7;
+    box-shadow: 3px 5px 7px 3px #8395a7;
 		align-items: center;
     justify-content: center;
     color: #fff;
@@ -33,30 +31,15 @@ header {
 
 header h1 { margin:0; padding:0;}
 
-
-section { padding:40px;
-          min-height:400px;}
-
-
-input[type='submit'] {
-	background: #3498db;
-	border: 0px;
-	color: #3498db;
-	padding:10px 15px;
-	cursor: pointer;
-	border-radius: 5px;
-	box-shadow: 0px 3px 1px #2980b9;
+.hidden {
+  display: none;
 }
 
-#result h3 {
-	background: ;
-	padding: 10px;
-	margin: 10px 0;
-}
-
-#result span {
-	color:#000;
-	font-weight: bold;
+.explanation {
+  color: gray;
+  padding: 10px;
+  border: 1px solid gray;
+  background-color: lightgray;
 }
 
 .success {
@@ -71,13 +54,48 @@ input[type='submit'] {
   form { min-width:100%;}
 
   .questioninput { margin-bottom:30px;}
-  
-#submit {
-  background-color: #1B1464;
-  color: #fff;
-  padding: 5px;
-  font-size: 20px;
-  
+
+.load {
+	text-align: center; padding-top:60px;padding-bottom:60px;
+}
+
+.questioninput input{
+	display: none;
+	padding: 15px;
+}
+
+.questioninput label{
+	color: black;
+  padding: 15px;
+	margin: 15px;
+	width: 180px;
+	display:inline-block;
+	text-align: center;
+	border-radius: 10px;
+	background-color: lightgray;
+  box-shadow: 3px 3px 9px 3px lightblue;
+  font-size: larger;
+}
+
+.questioninput label:hover{
+	background-color: gray;
+}
+
+.questioninput input[type="radio"]:checked + label {
+    border: 2px solid blue;
+    background-color: gray;
+}
+
+#actions {
+  text-align: center;
+}
+
+#actions button {
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  background-color: #2d8ae7;
 }
   
 @media screen and (max-width: 600
@@ -87,3 +105,11 @@ input[type='submit'] {
     margin:initial;
     text-align:initial;
   }
+
+
+
+
+
+
+
+  
