@@ -1,106 +1,17 @@
+<div id="container">
+  <header>
+    <h1>Webdeveloper Quiz</h1><span id="verSpan"></span>
+  </header>
 
-<!doctype html>
-
-<html lang="hu">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>WEBDEV QUIZ FRONTEND v3</title>
- 
-  <link rel="stylesheet" href="css/style.css?v=1.0">
-
-</head>
-
-<body>
+  <div id="questionDIV">
+    <div class="load">
+      <img src="
+	https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif" />
+    </div>
+  </div><!-- questionDIV end -->
   
-	<div id="container">
-		<header>
-     <h1>Webdeveloper Quiz</h1>
-		</header>
-    
-		
-			<div id="result"></div>
-			<form name="quizForm" onsubmit="preventDefault()">
-			<div class="questioninput">
-				<h3>1. Mit jelent a HTML kifejezés?  </h3>
-				<input type="radio" name="q1" value="a" id="q1a">  Válasz<br>
-				<input type="radio" name="q1" value="b" id="q1b"> Válasz <br>
-				<input type="radio" name="q1" value="c" id="q1c">HyperText Markup Language <br>
-				<input type="radio" name="q1" value="d" id="q1d"> Válasz <br>
-			</div>
-      
-      <div class="questioninput">
-				<h3>2.  Kérsés</h3>
-				<input type="radio" name="q2" value="a" id="q2a"> Válasz <br>
-				<input type="radio" name="q2" value="b" id="q2b"> Válasz <br>
-				<input type="radio" name="q2" value="c" id="q2c"> Válasz <br>
-				<input type="radio" name="q2" value="d" id="q2d"> Válasz <br>
-      </div>
+  <div id="actions">
+    <button id="evaluate" onclick="renderAllEvaluation()">KIÉRTÉKEL</button>
+  </div>
 
-     <div class="questioninput">
-				<h3>3. Kérdés</h3>
-				<input type="radio" name="q3" value="a" id="q3a"> Válasz <br>
-				<input type="radio" name="q3" value="b" id="q3b"> Válasz <br>
-				<input type="radio" name="q3" value="c" id="q3c"> Válasz <br>
-				<input type="radio" name="q3" value="d" id="q3d"> Válasz <br>
-      </div>
-
-      <div class="questioninput">
-				<h3>4. Kérdés</h3>
-				<input type="radio" name="q4" value="a" id="q4a"> Válasz <br>
-				<input type="radio" name="q4" value="b" id="q4b"> Válasz <br>
-				<input type="radio" name="q4" value="c" id="q4c"> Válasz <br>
-				<input type="radio" name="q4" value="d" id="q4d"> Válasz <br>
-			</div>
-
-			<div class="questioninput">
-				<h3>5. Kérdés </h3>
-				<input type="radio" name="q5" value="a" id="q5a"> Válasz <br>
-				<input type="radio" name="q5" value="b" id="q5b"> Válasz <br>
-				<input type="radio" name="q5" value="c" id="q5c"> Válasz <br>
-				<input type="radio" name="q5" value="d" id="q5d"> Válasz <br>
-			</div>
-				<br><br>
-        <div class="questioninput">
-				<h3>6. Kérdés </h3>
-				<input type="radio" name="q6" value="a" id="q6a"> Válasz <br>
-				<input type="radio" name="q6" value="b" id="q6b"> Válasz <br>
-				<input type="radio" name="q6" value="c" id="q6c"> Válasz <br>
-				<input type="radio" name="q6" value="d" id="q6d"> Válasz <br>
-			</div>
-        <div class="questioninput">
-				<h3>7. Kérdés </h3>
-				<input type="radio" name="q7" value="a" id="q7a"> Válasz <br>
-				<input type="radio" name="q7" value="b" id="q7b"> Válasz <br>
-				<input type="radio" name="q7" value="c" id="q7c"> Válasz <br>
-				<input type="radio" name="q7" value="d" id="q7d"> Válasz <br>
-			</div>
-        <div class="questioninput">
-				<h3>8. Kérdés </h3>
-				<input type="radio" name="q8" value="a" id="q8a"> Válasz <br>
-				<input type="radio" name="q8" value="b" id="q8b"> Válasz <br>
-				<input type="radio" name="q8" value="c" id="q8c"> Válasz <br>
-				<input type="radio" name="q8" value="d" id="q8d"> Válasz <br>
-			</div>
-        <div class="questioninput">
-				<h3>9. Kérdés </h3>
-				<input type="radio" name="q9" value="a" id="q9a"> Válasz <br>
-				<input type="radio" name="q9" value="b" id="q9b"> Válasz <br>
-				<input type="radio" name="q9" value="c" id="q9c"> Válasz <br>
-				<input type="radio" name="q9" value="d" id="q9d"> Válasz <br>
-			</div>
-        <div class="questioninput">
-				<h3>10. Kérdés </h3>
-				<input type="radio" name="q10" value="a" id="q10a"> Válasz <br>
-				<input type="radio" name="q10" value="b" id="q10b"> Válasz <br>
-				<input type="radio" name="q10" value="c" id="q10c"> Válasz <br>
-				<input type="radio" name="q10" value="d" id="q10d"> Válasz <br>
-			</div>
-        <button id="submit">Kiértékel</button>
-        </div>
-      </form>
-  <!-- your content here... -->
-  <script src="js/main.js"></script>
-</body>
-</html>
+</div><!-- Conmtainer end-->
