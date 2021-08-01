@@ -2,10 +2,10 @@
 WebDev Quiz Question Bank
 
 ### FRONTEND-1  
-Lastest Developer Version: V9
+Lastest Developer Version: V10
 
 Codepen frontend DEMOs:
-https://codepen.io/bzozoo/pen/NWjzPwZ?editors=0010
+https://codepen.io/bzozoo/pen/RwVJPpz?editors=1000
 
 GithubIO frontend DEMO:
 https://bzozoo.github.io/WebDevQuiz/Frontend-1/
