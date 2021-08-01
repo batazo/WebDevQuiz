@@ -15,3 +15,6 @@ https://webdevquiz.mysqhost.ml
 
 ##### Backend repository
 https://github.com/raernon/questionbank
+
+##### Gitlab Mirror Repository
+https://gitlab.com/bzozoo/webdevquiz/
