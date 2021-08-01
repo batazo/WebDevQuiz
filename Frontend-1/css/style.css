@@ -68,12 +68,12 @@ header h1 { margin:0; padding:0;}
 	color: black;
   padding: 15px;
 	margin: 15px;
-	width: 180px;
+	width: 300px;
 	display:inline-block;
 	text-align: center;
 	border-radius: 10px;
 	background-color: lightgray;
-  box-shadow: 3px 3px 9px 3px lightblue;
+  box-shadow: 3px 3px 9px 3px #075c77;
   font-size: larger;
 }
 
@@ -86,6 +86,13 @@ header h1 { margin:0; padding:0;}
     background-color: gray;
 }
 
+.questioninput hr{
+  height: 10px;
+    border: 0;
+    box-shadow: 0 10px 10px -10px #1f246c8a inset;
+}
+
+
 #actions {
   text-align: center;
 }
@@ -97,19 +104,20 @@ header h1 { margin:0; padding:0;}
   color: white;
   background-color: #2d8ae7;
 }
+
+.answerarea{
+  text-align: center;
+}
+
+@media screen and (max-width: 795px){ 
+.questioninput label{
+  width: 90%;
+ } 
   
-@media screen and (max-width: 600
-  px) {
+@media screen and (max-width: 600px) {
 
   form {
     margin:initial;
     text-align:initial;
   }
-
-
-
-
-
-
-
-  
+} 
