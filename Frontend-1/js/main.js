@@ -1,40 +1,40 @@
 //Globals
-const version = "v10";
+const version = "v11";
 let answerareas;
+let questionlimit = 10;
 let qinputs;
+let score = 0;
 
 //Inits
 renerQuestion();
 verSpan.innerHTML = `(${version})`;
 
 //Renders
-async function renderEvaluation(answerareas) {
-  answerareas.nextElementSibling.innerHTML = "";
-  let qid = getAnswerareaDatasetQid(answerareas);
-  let aids = getAnswerareaDatasetAids(answerareas);
-  
-  let data = await checkAnswer(qid, aids);
+async function renderEvaluation(answerareasN) {
+  answerareasN.nextElementSibling.innerHTML = "";
+  let data = await checkAnswerByAnswerarea(answerareasN)
+
   let explan = data.explanation == undefined ? "Nem jelöltél ki választ" : data.explanation;
   let correct = data.correct ? "A válaszod helyes!" : "A válaszod sajnos helytelen!";
+  scoreHandler(data.correct);
   let correctColor = data.correct ? "green" : "red";
   let whatCorrects = data.correctAnswers == undefined ? "" : data.correctAnswers;
-  let whatCorrectString = "";
-  if (whatCorrects) whatCorrectString = "A helyes válasz(ok):";
-  for (let whatCorrect of whatCorrects) {
-    whatCorrectString += " " + whatCorrect.answer;
-  }
+  let whatCorrectString = (whatCorrects)? getGoodAnswersStringFromData(data) : "";
+  
   let renderString = `
       <p><b style="color: ${correctColor}">${correct}</b> ${whatCorrectString}</p>
       <p>${explan}</p>
   `;
-  answerareas.nextElementSibling.innerHTML += renderString;
-  answerareas.nextElementSibling.classList.remove("hidden");
+  answerareasN.nextElementSibling.innerHTML += renderString;
+  answerareasN.nextElementSibling.classList.remove("hidden");
+  return data.correct
 }
 
-function renderAllEvaluation() {
+async function renderAllEvaluation() {
   for (let answerarea of answerareas) {
-    renderEvaluation(answerarea);
+    await renderEvaluation(answerarea);
   }
+  result.innerHTML = "A pontjaid száma: " + score
 }
 
 async function renerQuestion() {
@@ -75,24 +75,37 @@ async function renerQuestion() {
 }
 
 //Helpers
+function scoreHandler(iftrue){
+  if(iftrue) score ++
+}
+
 function refreshSelectors() {
   answerareas = document.querySelectorAll("[data-qid]");
   qinputs = document.querySelectorAll(".questioninput");
 }
 
-function getAnswerareaDatasetQid(answerareas) {
-  return answerareas.dataset.qid;
+function getAnswerareaDatasetQid(answerareasN) {
+  return answerareasN.dataset.qid;
 }
 
-function getAnswerareaDatasetAids(answerareas) {
+function getAnswerareaSelectedDatasetAids(answerareasN) {
   let checkedAnswers = document.querySelectorAll(
-    `#${answerareas.id} input:checked`
+    `#${answerareasN.id} input:checked`
   );
   let selected = [];
   for (let checkedAnswer of checkedAnswers) {
     selected.push(checkedAnswer.dataset.aid);
   }
   return selected;
+}
+
+function getAnswerareaAllDatasetAids(answerareasN) {
+  let answersInArea = document.querySelectorAll(`#${answerareasN.id} input`);
+  let answerareaAids = [];
+  for (let answerInArea of answersInArea) {
+    answerareaAids.push(answerInArea.dataset.aid);
+  }
+  return answerareaAids;
 }
 
 function getGoodAnswersFromData(fromdata){
@@ -104,16 +117,22 @@ function getGoodAnswersFromData(fromdata){
 }
 
 function getGoodAnswersStringFromData(fromdata){
-  let goodAnswers = "";
+  let goodAnswers = "A helyes válasz(ok): ";
   for(data of fromdata.correctAnswers){
     goodAnswers += data.answer;
   }
   return goodAnswers;
 }
 
+async function checkAnswerByAnswerarea(answerareasN){
+  let qid = getAnswerareaDatasetQid(answerareasN);
+  let aids = getAnswerareaSelectedDatasetAids(answerareasN);
+  
+  return await checkAnswer(qid, aids);
+}
 //Data Queries
 async function getQuestion() {
-  const endpoint = "https://webdevquiz.mysqhost.ml:8090/api/questionlist/10";
+  const endpoint = "https://webdevquiz.mysqhost.ml:8090/api/questionlist/" + questionlimit;
 
   const response = await fetch(endpoint);
   const data = await response.json();
