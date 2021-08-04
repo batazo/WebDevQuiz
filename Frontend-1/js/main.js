@@ -1,5 +1,5 @@
 //Globals
-const version = "v11";
+const version = "v12";
 let answerareas;
 let questionlimit = 10;
 let qinputs;
@@ -12,22 +12,9 @@ verSpan.innerHTML = `(${version})`;
 //Renders
 async function renderEvaluation(answerareasN) {
   answerareasN.nextElementSibling.innerHTML = "";
-  let data = await checkAnswerByAnswerarea(answerareasN)
-
-  let explan = data.explanation == undefined ? "Nem jelöltél ki választ" : data.explanation;
-  let correct = data.correct ? "A válaszod helyes!" : "A válaszod sajnos helytelen!";
-  scoreHandler(data.correct);
-  let correctColor = data.correct ? "green" : "red";
-  let whatCorrects = data.correctAnswers == undefined ? "" : data.correctAnswers;
-  let whatCorrectString = (whatCorrects)? getGoodAnswersStringFromData(data) : "";
-  
-  let renderString = `
-      <p><b style="color: ${correctColor}">${correct}</b> ${whatCorrectString}</p>
-      <p>${explan}</p>
-  `;
+  let renderString = await evaluationTemplate(await evaluationTempleteVars(answerareasN))
   answerareasN.nextElementSibling.innerHTML += renderString;
   answerareasN.nextElementSibling.classList.remove("hidden");
-  return data.correct
 }
 
 async function renderAllEvaluation() {
@@ -72,6 +59,32 @@ async function renerQuestion() {
 
   questionDIV.innerHTML = renderString;
   refreshSelectors();
+}
+
+//TemplateVars
+async function evaluationTempleteVars(answerareasN) {
+  let data = await checkAnswerByAnswerarea(answerareasN);
+  let explan = data.explanation == undefined ? "Nem jelöltél ki választ" : data.explanation;
+  let correct = data.correct ? "A válaszod helyes!" : "A válaszod sajnos helytelen!";
+  let correctColor = data.correct ? "green" : "red";
+  scoreHandler(data.correct)
+  let whatCorrects = data.correctAnswers == undefined ? "" : data.correctAnswers;
+  let whatCorrectString = (whatCorrects)? getGoodAnswersStringFromData(data) : "";
+  
+  return {
+    explan: explan,
+    correct: correct,
+    correctColor: correctColor,
+    whatCorrectString: whatCorrectString
+  }
+}
+
+//Templates
+async function evaluationTemplate(templateVar){
+ return `
+      <p><b style="color: ${templateVar.correctColor}">${templateVar.correct}</b> ${templateVar.whatCorrectString}</p>
+      <p>${templateVar.explan}</p>
+  `;
 }
 
 //Helpers
