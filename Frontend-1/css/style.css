@@ -112,7 +112,13 @@ header h1 { margin:0; padding:0;}
 @media screen and (max-width: 795px){ 
 .questioninput label{
   width: 90%;
- } 
+ }
+
+  body{
+    margin: 0px;
+  }  
+  
+}
   
 @media screen and (max-width: 600px) {
 
