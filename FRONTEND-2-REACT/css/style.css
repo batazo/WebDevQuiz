@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+      box-sizing: border-box;
+}
+
+body {
+      background-image: url("https://i.imgur.com/cT14BRK.jpg");
+      font-family: "Roboto", sans-serif;
+      margin: 0px;
+}
+
+h3 {
+      font-weight: 600;
+}
+
+#navbar {
+      overflow: hidden;
+      top: 0;
+      position: fixed;
+      background-color: rgb(59 108 145);
+      margin-bottom: 8px;
+      height: 50px;
+      width: 100%;
+      color: white;
+      padding: 5px 45px 5px 45px;
+      box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 90%);
+}
+
+#logo {
+      float: left;
+}
+
+#navbarbuttons {
+      float: right;
+}
+
+#navbarbuttons button {
+      padding: 10px;
+      color: white;
+      background-color: #2d8ae7;
+      margin-left: 3px;
+      line-height: normal;
+		outline: none;
+  		box-shadow: none;
+}
+
+#navbarbuttons button:focus {
+      outline: none;
+  		box-shadow: none;
+}
+
+#root {
+      margin: 65px 40px 40px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+}
+
+#container {
+      display: block;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 5px;
+}
+
+#container p {
+      margin: 0;
+}
+
+#containerheader {
+      margin-bottom: 10px;
+}
+
+.flexedpanel {
+      display: flex;
+}
+
+#qheader {
+      padding: 15px;
+      display: inline-block;      
+}
+
+#scorepanel {
+     width: 100%;
+     background-color: rgb(59 108 145 / 83%);
+     border-radius: 10px;
+     margin-left: 15px;
+     margin-right: 15px;
+     padding: 10px;
+     text-align: left;
+     display: inline-block;
+}
+
+.panel {
+      background-color: rgb(59 108 145 / 83%);
+      border-radius: 10px;
+      box-shadow: 3px 5px 7px 3px #8395a7;
+      padding: 15px;
+}
+
+.error {
+      background-color: rgb(145 59 59 / 83%);
+}
+
+.evalutionprogress {
+	text-align: center;
+	background-color: rgb(145 59 59 / 83%);
+	margin-bottom: 10px;
+}
+
+header {
+      border-bottom: 1px dotted white;
+      text-align: center;
+}
+
+header h1 {
+      margin: 0;
+      padding: 0;
+}
+
+.hidden {
+      display: none;
+}
+
+.descriptionarea{
+	font-size: 24px;
+}
+
+.explanation {
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      border: 1px solid gray;
+      background-color: lightgray;
+}
+
+.success {
+      background: rgb(26,208,22);
+      background: linear-gradient(163deg, rgba(26,208,22,0.9062170821629214) 0%, rgba(17,121,9,0.8050934866573034) 94%);
+}
+
+.unsuccessful {
+      background: rgb(208,22,34);
+      background: linear-gradient(163deg, rgba(208,22,34,0.9062170821629214) 0%, rgba(121,9,9,0.8050934866573034) 94%);
+}
+
+#result {
+      margin: 10px;
+      padding: 10px;
+      background-color: lightgray;
+      border: 3px solid blue;
+      color: darkblue;
+}
+
+
+.questioninput {
+      margin-bottom: 30px;
+}
+
+.load {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 60px;
+}
+
+.questioninput input {
+      display: none;
+      padding: 15px;
+}
+
+.questioninput label {
+      color: black;
+      padding: 15px;
+      margin: 15px;
+      width: 300px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 10px;
+      background-color: lightgray;
+      box-shadow: 3px 3px 9px 3px #075c77;
+      font-size: larger;
+}
+
+.questioninput label:hover {
+      background-color: gray;
+}
+
+.questioninput input[type="radio"]:checked + label {
+      border: 2px solid blue;
+      background-color: gray;
+}
+
+.questioninput hr {
+      height: 10px;
+      border: 0;
+      box-shadow: 0 10px 10px -10px #1f246c8a inset;
+      opacity: 1;
+      background-color: transparent;
+}
+
+.answerarea {
+      text-align: center;
+}
+
+.largest {
+      font-size: xx-large;
+}
+
+@media screen and (max-width: 795px) {
+      .questioninput label {
+            width: 90%;
+      }
+
+      #root {
+            margin: 65px 0px 0px 0px;
+      }
+
+      #navbar {
+            padding: 5px 5px 5px 5px;
+      }
+}
+
+@media screen and (max-width: 590px) {
+      .largest {
+            font-size: x-large;
+      }
+
+      #navbarbuttons button {
+            padding: 8px;
+            margin-right: 5px;
+            font-size: large;
+      }
+
+      .navbarbuttontext {
+            display: none;
+      }
+}
