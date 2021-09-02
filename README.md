@@ -30,8 +30,10 @@ https://webdevquiz.mysqhost.ml
 ##### Server endpoints
 Api description:
 https://webdevquiz.mysqhost.ml:8090/swagger-ui.html
+
 Get a random question:
 https://webdevquiz.mysqhost.ml:8090/api/question
+
 Get random 10 questions:
 https://webdevquiz.mysqhost.ml:8090/api/questionlist/10
 
