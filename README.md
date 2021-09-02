@@ -27,6 +27,14 @@ https://webdevquiz.mysqhost.ml/downloads/Webmaster%20Quiz%20v12_1_1.0.apk
 ##### Live Backend server
 https://webdevquiz.mysqhost.ml
 
+##### Server endpoints
+Api description:
+https://webdevquiz.mysqhost.ml:8090/swagger-ui.html
+Get a random question:
+https://webdevquiz.mysqhost.ml:8090/api/question
+Get random 10 questions:
+https://webdevquiz.mysqhost.ml:8090/api/questionlist/10
+
 ##### Backend repository
 https://github.com/raernon/questionbank
 
