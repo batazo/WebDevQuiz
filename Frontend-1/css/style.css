@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
   * {  box-sizing: border-box;
@@ -41,6 +42,12 @@ header h1 { margin:0; padding:0;}
   border: 1px solid gray;
   background-color: lightgray;
 }
+
+#result {
+	margin: 10px;padding: 10px;background-color: lightgray;border: 3px solid blue;color: darkblue;
+	
+	
+} 
 
 .success {
 	color: lightgreen;
@@ -126,4 +133,4 @@ header h1 { margin:0; padding:0;}
     margin:initial;
     text-align:initial;
   }
-} 
+}
