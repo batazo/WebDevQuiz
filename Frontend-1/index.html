@@ -17,8 +17,9 @@
 
 <div id="container">
   <header>
-    <h1>Webdeveloper Quiz</h1><span id="verSpan"></span>
+    <h1>Webmaster Quiz</h1><span id="verSpan"></span>
   </header>
+	<div id="result" class="hidden"></div>
 
   <div id="questionDIV">
     <div class="load">
@@ -27,16 +28,11 @@
     </div>
   </div><!-- questionDIV end -->
   
-  <div id="result" class="">
-    
-  </div>
-  
   <div id="actions">
-    <button id="evaluate" onclick="renderAllEvaluation();window.scrollTo(0, 0);score = 0">KIÉRTÉKEL</button>
+    <button id="evaluate" onclick="runEvaluation()">KIÉRTÉKEL</button>
   </div>
 
 </div><!-- Conmtainer end-->
-
 <!-- HTML CONTENT FROM CODEPEN END -->
   <script src="js/main.js"></script>
 </body>
