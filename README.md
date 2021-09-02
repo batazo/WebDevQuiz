@@ -9,7 +9,7 @@ Codepen frontend DEMO:
 https://codepen.io/bzozoo/pen/KKqMqRe
 
 GithubIO frontend DEMO:
-COMMING SOON
+https://bzozoo.github.io/WebDevQuiz/FRONTEND-2-REACT/
 
 ### FRONTEND-1 (JS without framework)  
 Lastest Developer Version: V18B
