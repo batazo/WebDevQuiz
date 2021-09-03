@@ -1,109 +1,120 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
-      box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-      background-image: url("https://i.imgur.com/cT14BRK.jpg");
-      font-family: "Roboto", sans-serif;
-      margin: 0px;
+	background-image: url("https://i.imgur.com/cT14BRK.jpg");
+	font-family: "Roboto", sans-serif;
+	margin: 0px;
 }
 
 h3 {
-      font-weight: 600;
+	font-weight: 600;
 }
 
 #navbar {
-      overflow: hidden;
-      top: 0;
-      position: fixed;
-      background-color: rgb(59 108 145);
-      margin-bottom: 8px;
-      height: 50px;
-      width: 100%;
-      color: white;
-      padding: 5px 45px 5px 45px;
-      box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 90%);
+	overflow: hidden;
+	top: 0;
+	position: fixed;
+	background-color: rgb(59 108 145);
+	margin-bottom: 8px;
+	height: 53px;
+	width: 100%;
+	color: white;
+	padding: 5px 45px 5px 45px;
+	box-shadow: 0px 8px 20px 0px rgb(0 0 0 / 90%);
 }
 
 #logo {
-      float: left;
+	float: left;
+	/* margin-top: 3px; */
+   /*margin-left: 5px;*/
+   display: inline-block;
 }
 
 #navbarbuttons {
-      float: right;
+	float: right;
+	display: inline-block;
+   right: 45px;
+   position: absolute;
 }
 
 #navbarbuttons button {
-      padding: 10px;
-      color: white;
-      background-color: #2d8ae7;
-      margin-left: 3px;
-      line-height: normal;
-		outline: none;
-  		box-shadow: none;
+	padding: 10px;
+	color: white;
+	background-color: #2d8ae7;
+	margin-left: 3px;
+	line-height: normal;
+	outline: none;
+	box-shadow: none;
 }
 
 #navbarbuttons button:focus {
-      outline: none;
-  		box-shadow: none;
+	outline: none;
+	box-shadow: none;
 }
 
 #root {
-      margin: 65px 40px 40px 40px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
+	margin: 65px 40px 40px 40px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 #container {
-      display: block;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      padding: 5px;
+	display: block;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 5px;
 }
 
 #container p {
-      margin: 0;
+	margin: 0;
 }
 
 #containerheader {
-      margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .flexedpanel {
-      display: flex;
+	display: flex;
 }
+
+.descriptionarea iframe {
+		height: auto;
+	}
 
 #qheader {
-      padding: 15px;
-      display: inline-block;      
+	padding: 15px;
+	display: inline-block;
 }
 
+
 #scorepanel {
-     width: 100%;
-     background-color: rgb(59 108 145 / 83%);
-     border-radius: 10px;
-     margin-left: 15px;
-     margin-right: 15px;
-     padding: 10px;
-     text-align: left;
-     display: inline-block;
+	width: 100%;
+	background-color: rgb(59 108 145 / 83%);
+	border-radius: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 10px;
+	text-align: left;
+	display: inline-block;
 }
 
 .panel {
-      background-color: rgb(59 108 145 / 83%);
-      border-radius: 10px;
-      box-shadow: 3px 5px 7px 3px #8395a7;
-      padding: 15px;
+	background-color: rgb(59 108 145 / 83%);
+	border-radius: 10px;
+	box-shadow: 3px 5px 7px 3px #8395a7;
+	padding: 15px;
 }
 
 .error {
-      background-color: rgb(145 59 59 / 83%);
+	background-color: rgb(145 59 59 / 83%);
 }
 
 .evalutionprogress {
@@ -113,129 +124,198 @@ h3 {
 }
 
 header {
-      border-bottom: 1px dotted white;
-      text-align: center;
+	border-bottom: 1px dotted white;
+	text-align: center;
 }
 
 header h1 {
-      margin: 0;
-      padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .hidden {
-      display: none;
+	display: none;
 }
 
-.descriptionarea{
+.descriptionarea {
 	font-size: 24px;
 }
 
 .explanation {
-      color: white;
-      border-radius: 10px;
-      padding: 10px;
-      border: 1px solid gray;
-      background-color: lightgray;
+	color: white;
+	border-radius: 10px;
+	padding: 10px;
+	border: 1px solid gray;
+	background-color: lightgray;
 }
 
 .success {
-      background: rgb(26,208,22);
-      background: linear-gradient(163deg, rgba(26,208,22,0.9062170821629214) 0%, rgba(17,121,9,0.8050934866573034) 94%);
+	background: rgb(26, 208, 22);
+	background: linear-gradient(
+		163deg,
+		rgba(26, 208, 22, 0.9062170821629214) 0%,
+		rgba(17, 121, 9, 0.8050934866573034) 94%
+	);
 }
 
 .unsuccessful {
-      background: rgb(208,22,34);
-      background: linear-gradient(163deg, rgba(208,22,34,0.9062170821629214) 0%, rgba(121,9,9,0.8050934866573034) 94%);
+	background: rgb(208, 22, 34);
+	background: linear-gradient(
+		163deg,
+		rgba(208, 22, 34, 0.9062170821629214) 0%,
+		rgba(121, 9, 9, 0.8050934866573034) 94%
+	);
 }
 
 #result {
-      margin: 10px;
-      padding: 10px;
-      background-color: lightgray;
-      border: 3px solid blue;
-      color: darkblue;
+	margin: 10px;
+	padding: 10px;
+	background-color: lightgray;
+	border: 3px solid blue;
+	color: darkblue;
 }
 
-
 .questioninput {
-      margin-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.questioninput h3 {
+	background-color: #3b6c91b3;
+   border-radius: 10px;
+   padding: 15px;
 }
 
 .load {
-      text-align: center;
-      padding-top: 60px;
-      padding-bottom: 60px;
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .questioninput input {
-      display: none;
-      padding: 15px;
+	display: none;
+	padding: 15px;
 }
 
 .questioninput label {
-      color: black;
-      padding: 15px;
-      margin: 15px;
-      width: 300px;
-      display: inline-block;
-      text-align: center;
-      border-radius: 10px;
-      background-color: lightgray;
-      box-shadow: 3px 3px 9px 3px #075c77;
-      font-size: larger;
+	color: black;
+	padding: 15px;
+	margin: 15px;
+	width: 300px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 10px;
+	background-color: lightgray;
+	box-shadow: 3px 3px 9px 3px #075c77;
+	font-size: larger;
 }
 
 .questioninput label:hover {
-      background-color: gray;
+	background-color: gray;
 }
 
 .questioninput input[type="radio"]:checked + label {
-      border: 2px solid blue;
-      background-color: gray;
+	border: 2px solid blue;
+	background-color: gray;
 }
 
 .questioninput hr {
-      height: 10px;
-      border: 0;
-      box-shadow: 0 10px 10px -10px #1f246c8a inset;
-      opacity: 1;
-      background-color: transparent;
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #1f246c8a inset;
+	opacity: 1;
+	background-color: transparent;
 }
 
 .answerarea {
-      text-align: center;
+	text-align: center;
 }
 
 .largest {
-      font-size: xx-large;
+	font-size: xx-large;
+}
+
+.tag__item{
+	display:inline-block;
+	color:#fff!important;
+	font-size:1em;
+	background-color:#2d4e6ab5;
+	padding:6px 23px 9px;
+	border-radius:70em;
+	margin:8px 6px 8px 0;
+	position:relative;
+	text-transform:lowercase;
+}
+
+.tag__item:after,.tag__item:before{
+	content:"";
+	display:inline-block;
+	position:absolute;
+	top:calc(50% - 3px);
+	width:7px;
+	height:7px;
+	border-radius:50%;
+	background:#32557f;
+	box-shadow:inset 0 -2px 0 #1a2c42;
+}
+
+.tag__item:before{
+	left:7px
+}
+
+.tag__item:after{
+	right:7px
 }
 
 @media screen and (max-width: 795px) {
-      .questioninput label {
-            width: 90%;
-      }
+	.questioninput label {
+		width: 90%;
+	}
 
-      #root {
-            margin: 65px 0px 0px 0px;
-      }
+	#root {
+		margin: 65px 0px 0px 0px;
+	}
 
-      #navbar {
-            padding: 5px 5px 5px 5px;
-      }
+	#navbar {
+		padding: 5px 5px 5px 5px;
+	}
+
+	#navbarbuttons {
+		right: 10px;
+	}
 }
 
 @media screen and (max-width: 590px) {
-      .largest {
-            font-size: x-large;
-      }
+	#navbar {
+		height: 50px;
+	}
+	
+	#logo {
+   	float: left;
+   	margin-top: 3px;
+   	margin-left: 5px;
+	}
+	
+	.largest {
+		font-size: x-large;
+	}
+	
+	#navbarbuttons {
+		right: 5px;
+	}
+	
+	#navbarbuttons button {
+		padding: 8px;
+		margin-right: 5px;
+		font-size: large;
+	}
 
-      #navbarbuttons button {
-            padding: 8px;
-            margin-right: 5px;
-            font-size: large;
-      }
-
-      .navbarbuttontext {
-            display: none;
-      }
+	.navbarbuttontext {
+		display: none;
+	}
+	
+	.descriptionarea iframe {
+		height: auto;
+		margin-bottom: -60px;
+	}
+	
 }
