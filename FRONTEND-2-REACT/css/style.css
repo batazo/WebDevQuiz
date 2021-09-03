@@ -242,7 +242,7 @@ header h1 {
 	padding:6px 23px 9px;
 	border-radius:70em;
 	margin:8px 6px 8px 0;
-	position:relative;
+	/* position:relative; */
 	text-transform:lowercase;
 }
 
