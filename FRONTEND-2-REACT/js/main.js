@@ -1,4 +1,4 @@
-const application = { name: "Webmaster QUIZ", version: "v11-React" };
+const application = { name: "Webmaster QUIZ", version: "v14B-React" };
 const endpoints = {
   questionlist: "https://webdevquiz.mysqhost.ml:8090/api/questionlist/",
   answerchecker: "https://webdevquiz.mysqhost.ml:8090/api/check/" };
@@ -262,11 +262,21 @@ function Panel({ panelId, qid, question, answers, evalutiondata, evaluted }) {
     React.createElement(EvalutionPanel, {
       calculatedEvalutionDatas: evalutionTemplateCalculator(
       panelId,
-      evalutiondata) })));
+      evalutiondata) }),
 
 
 
+    findQuestionByQid(qid) != undefined && /*#__PURE__*/React.createElement(TagContainer, { qid: qid })));
 
+
+}
+
+function TagContainer({ qid }) {
+
+  let TagItems = findQuestionByQid(qid).tag != undefined ? findQuestionByQid(qid).tag.map(tag => /*#__PURE__*/React.createElement("div", { class: "tag__item" }, tag)) : "";
+
+  return /*#__PURE__*/React.createElement("div", { class: "tagcontainer" },
+  TagItems);
 
 }
 
